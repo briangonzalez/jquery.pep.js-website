@@ -1,0 +1,46 @@
+/* 
+ * VARIABLES
+ * =================================================== */
+
+// SUSY ====================================================
+/* see http://susy.oddbird.net/guides/reference/ */
+$total-columns:               12;
+$column-width:                4.0em;
+$gutter-width:                1.2em;
+$grid-padding:                $gutter-width;
+$border-box-sizing:           true;
+$breakpoint:                  0em 45em; /* min-max media query breakpoint */
+$from-direction:              left;
+$omega-float:                 $from-direction;
+
+// COLORS ====================================================
+$primary-color:               #e73b21;
+$secondary-color:             #d1e8f0;
+$tertiary-color:              #70665c;
+$tertiary2-color:             #f3e392;
+
+$text-color:                  #222;
+$code-color:                  #5f5f5e;
+$bg-color:                    #fff;
+$lightgrey:                   #ddd;
+$darkgrey:                    #333;
+$border-color:                #eee;
+$blockquote-border-color:     $primary-color;
+
+// TYPOGRAPHY ====================================================
+$base-font-size:              16px;
+$base-line-height:            30px;
+$base-font-weight:            300;
+$base-font:                   'Open Sans', Arial, sans-serif, sans;
+$base-heading-font:           'Bree Serif', Arial, sans-serif, sans;
+$alt-font:                    Arial, sans-serif, sans;
+$code-font:                   Consolas,Menlo,Monaco,Courier New,monospace,serif;
+$base-heading-fontweight:     bold;
+$base-headingfont-color:      $darkgrey;
+
+$h1-size:                     32px;
+$h2-size:                     24px;
+$h3-size:                     21px;
+$h4-size:                     18px;
+$h5-size:                     16px;
+$h6-size:                     14px;

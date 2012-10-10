@@ -1,0 +1,46 @@
+/* 
+ * APPLICATION - THE "BASIS" OF THE SITE'S DESIGN
+ * ========================================================================== */
+
+html{}
+body {
+  background: $bg-color;
+  color: $text-color;
+  padding: 0;
+  
+  font: {
+    family: $base-font;
+    weight: $base-font-weight;
+    line-height: $base-line-height;
+  }
+
+  @include query-at($break-5){ 
+    h2{ font-size: $h2-size*1.2; }
+    p{ font-size: 120%; line-height: $base-line-height*1.2;}
+  }
+
+  @include query-at($break-6){ 
+    h2{ font-size: $h2-size*1.6; }
+    p{ font-size: 140%; line-height: $base-line-height*1.6; }
+  }
+
+}
+
+
+::selection, ::-moz-selection {
+  background: lighten( desaturate($primary-color, 20%), 20%);
+  color: $text-color;
+}
+
+#sidebar {
+  color: $darkgrey + 50;
+  margin-bottom: $base-line-height;
+  font-size: 95%;
+  border-bottom: 1px dashed $lightgrey;
+  padding-bottom: 10px;
+
+  @include query-at($break-3){ 
+    float: right;  
+    border: none;
+  }
+}

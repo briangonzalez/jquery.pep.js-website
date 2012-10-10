@@ -1,0 +1,11 @@
+#main{
+  overflow: visible;  
+}
+
+blockquote{
+  border-left: 10px solid $blockquote-border-color;
+  margin: 0 0 $gutter-width*2 0;
+  @include span-columns(11,12);
+  @include prefix(1);
+  @include push(1);
+}

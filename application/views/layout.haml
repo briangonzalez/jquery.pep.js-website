@@ -1,0 +1,27 @@
+!!!
+/[if lt IE 7]   <html class="no-js lt-ie9 lt-ie8 lt-ie7">  
+/[if IE 7]      <html class="no-js lt-ie9 lt-ie8">  
+/[if IE 8]      <html class="no-js lt-ie9">  
+/[if gt IE 8]>  <html class="no-js">
+
+%head
+  = partial "partials/head"
+
+%body
+  /[if lt IE 7]
+    = partial "partials/chromeframe"
+
+  .container
+    = partial "partials/nav"
+
+  .container
+    = partial "partials/header"
+
+  .container
+    = partial "partials/sidebar"
+
+    #main{:role => "main"}
+      = yield
+
+  .container
+    = partial "partials/footer"

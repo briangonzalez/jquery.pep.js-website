@@ -1,0 +1,26 @@
+/* 
+ * LAYOUT
+ * =================================================== */
+
+
+header          { clear:both; }
+
+.container      { 
+  @include container; 
+  &.show-grid{ @include susy-grid-background; }
+}
+
+#main           { 
+  @include clearfix; 
+  @include query-at($break-3){ 
+    @include span-columns(9, 12);
+  }
+}
+
+#sidebar        {
+  @include query-at($break-3){
+    @include span-columns(3 omega,12);
+  }
+}
+
+footer          { clear:both; }

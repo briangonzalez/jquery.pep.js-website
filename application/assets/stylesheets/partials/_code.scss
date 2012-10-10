@@ -1,0 +1,23 @@
+@import 'partials/prettify';
+
+#main{
+  pre{
+    margin-top: 0;
+    margin-bottom: $base-line-height;
+    @include span-columns(11,12);
+    @include push(1);
+
+    code{
+      padding: $gutter-width;
+      border: 1px solid $lightgrey + 20;
+      @include span-columns(10,11);
+      @include border-radius(0px);
+      font-size: 80%;
+
+      @include query-at($break-1){
+        font-size: inherit;
+      }
+
+    }
+  }
+}

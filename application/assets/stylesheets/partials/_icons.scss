@@ -1,0 +1,60 @@
+/*
+*     @font-face logic
+*/
+
+@font-face {
+  font-family: 'fontawesome';
+  src: font-url("fontawesome-webfont.eot") format('embedded-opentype'), 
+       font-url("fontawesome-webfont.woff") format('woff'), 
+       font-url("fontawesome-webfont.ttf")  format('truetype'),
+       font-url("fontawesome-webfont.svg") format('svg');
+}
+
+/* ****************************************************
+ *  Icons with Text
+ ******************************************************/ 
+[data-icon]:before {
+  font-family: 'fontawesome'; /* BYO icon font, mapped smartly */
+  content: attr(data-icon);
+  speak: none; /* Not to be trusted, but hey. */
+}
+
+.icon-font{
+  font-family: 'fontawesome';
+}
+
+/* ***********************************************************************
+ *  Icons without Text (special markup for screen-readers)
+ *************************************************************************/ 
+
+.icon-alone {
+  display: inline-block; /* Fix for clickability issue in WebKit */
+}
+.screen-reader-text { /* Reusable, toolbox kind of class */
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+/* ***********************************************************************
+ *  Customizations
+ *************************************************************************/ 
+h2[data-icon]{ position: relative; overflow: visible; }
+h2[data-icon]:before{ content: none; };
+h2[data-icon]:hover:before{
+  font-family: $base-heading-font;
+  content: attr(data-icon);
+  position: absolute; left: -30px; top: 0px;
+};
+
+
+/* ***********************************************************************
+ *  Example Markup
+ *    - read the full article here:
+      - http://css-tricks.com/examples/IconFont/
+ *************************************************************************/ 
+
+// <h3>
+//   <span aria-hidden="true" data-icon="&#x21dd;"></span>
+//   Stats
+// </h3>

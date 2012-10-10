@@ -1,0 +1,20 @@
+%meta{:charset => "utf-8"}
+%link{:href => image_path('favicon.ico'), :rel => "shortcut icon"}
+%title= @title
+%meta{:content => "Meaningful description.", :name => "description"}
+%meta{:content => "width=device-width", :name => "viewport"}
+%link{:href => stylesheet_path('style'), :media => "all", :rel => "stylesheet"}
+
+/ Google Web Fonts, use 'em..
+%link{:href => '//fonts.googleapis.com/css?family=Bree+Serif', :media => "all", :rel => "stylesheet"}
+%link{:href => '//fonts.googleapis.com/css?family=Open+Sans:700,700italic,400,400italic,300,300italic', :media => "all", :rel => "stylesheet"}
+
+/ More ideas for your <head> here: h5bp.com/docs/#head-Tips
+/
+/  Modernizr enables HTML5 elements and feature detects;
+/  For optimal performance, use a custom Modernizr build: www.modernizr.com/download/
+/  For Modernizr.load to work, check the box for it on the build page
+%script{:src => javascript_path('//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js')}
+
+/[if lt IE 9]
+  %script{:src => javascript_path('//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js')}

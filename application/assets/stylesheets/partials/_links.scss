@@ -1,0 +1,14 @@
+#main{
+  a, a:visited{
+    padding: 2px;
+    text-decoration: none;
+    // background: $secondary-color;
+    color: $primary-color;
+    @include border-radius(2px);
+    @include single-transition(all, 0.2s);
+    font-weight: 400;
+
+    &:hover{ color: $text-color + 20; background: $secondary-color + 10;}
+
+  }
+}

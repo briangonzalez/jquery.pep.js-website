@@ -1,0 +1,6 @@
+%nav
+  %ul
+    - nav_items = ['home', 'about', 'contact']
+    - nav_items.each do |i|
+      %li
+        %a{ :href => "/#{i}" }="#{i.upcase}"
