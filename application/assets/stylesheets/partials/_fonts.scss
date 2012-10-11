@@ -1,0 +1,22 @@
+//
+//    The New BulletProof @font-face syntax.
+//    http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax
+//
+
+
+// Uncomment to use..
+
+/*
+
+
+        @font-face {
+            font-family: 'font';
+            src: font_url('font.eot');
+            src: font_url('font.eot?#iefix')   format('embedded-opentype'),
+                 font_url('font.woff')  format('woff'),
+                 font_url('font.ttf')   format('truetype'),
+                 font_url('font.svg')   format('svg');
+            font-weight: normal;
+            font-style: normal; }
+
+*/

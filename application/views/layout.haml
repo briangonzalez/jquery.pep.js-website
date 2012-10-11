@@ -20,7 +20,7 @@
   .container
     = partial "partials/sidebar"
 
-    #main{:role => "main"}
+    #main{:role => "main", :class => underscored_path}
       = yield
 
   .container
