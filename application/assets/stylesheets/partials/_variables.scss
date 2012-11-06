@@ -19,7 +19,7 @@ $secondary-color:             #d1e8f0;
 $tertiary-color:              #70665c;
 $tertiary2-color:             #f3e392;
 
-$text-color:                  #222;
+$text-color:                  #333;
 $code-color:                  #5f5f5e;
 $bg-color:                    #fff;
 $lightgrey:                   #ddd;
@@ -30,13 +30,13 @@ $blockquote-border-color:     $primary-color;
 // TYPOGRAPHY ====================================================
 $base-font-size:              16px;
 $base-line-height:            30px;
-$base-font-weight:            300;
-$base-font:                   'Open Sans', Arial, sans-serif, sans;
-$base-heading-font:           'Bree Serif', Arial, sans-serif, sans;
+$base-font-weight:            400;
+$base-font:                   'PT Sans', Arial, sans-serif, sans;
+$base-heading-font:           'Montserrat', Arial, sans-serif, sans;
 $alt-font:                    Arial, sans-serif, sans;
-$code-font:                   Consolas,Menlo,Monaco,Courier New,monospace,serif;
+$code-font:                   'Source Code', Consolas,Menlo,Monaco,Courier New,monospace,serif;
 $base-heading-fontweight:     bold;
-$base-headingfont-color:      $darkgrey;
+$base-headingfont-color:      $darkgrey - 20;
 
 $h1-size:                     32px;
 $h2-size:                     24px;

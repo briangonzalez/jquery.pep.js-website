@@ -1,4 +1,9 @@
 header { 
-  h1{ font-size: 300%; }
+  h1{ 
+    font-size: 40px; text-transform: uppercase;
+    @include query-at($break-2){ font-size: 75px;  }
+    @include query-at($break-4){ font-size: 120px;  }
+  }
+
   margin-top: $gutter-width*2; 
 }

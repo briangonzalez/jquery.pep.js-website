@@ -13,9 +13,9 @@ set :show_exceptions, false
 set :raise_errors,    development?
 set :views,           './application/views'
 set :logging,         true
-set :static,          false                 # your upstream server should deal with those (nginx, Apache)
+set :static,          true                  # your upstream server should deal with those (nginx, Apache)
 set :ga,              'UX-XXXXXX'           # your Google Analytics ID for this site
-set :site,            'sinatra r∞tstrap'    # your site's name
+set :site,            'sinatra rootstrap'    # your site's name
 
 # = map it out for me, boyeeeeiee =
 # sprockets

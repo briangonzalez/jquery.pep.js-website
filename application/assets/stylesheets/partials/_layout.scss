@@ -18,6 +18,9 @@ header          { clear:both; }
 }
 
 #sidebar        {
+
+  line-height: 30px;
+
   @include query-at($break-3){
     @include span-columns(3 omega,12);
   }
