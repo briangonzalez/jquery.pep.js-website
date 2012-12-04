@@ -4,78 +4,49 @@
 
 // HEADINGS ====================================================
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-margin : 0;
-font-family : $base-heading-font;
-font-weight : $base-heading-fontweight;
-color : $base-headingfont-color;
-text-rendering : optimizelegibility; }
+h1, h2, h3, h4, h5, h6 {
+  margin : 0;
+  font-family : $base-heading-font;
+  font-weight : $base-heading-fontweight;
+  color : $base-headingfont-color;
+  text-rendering : optimizelegibility; 
+}
 
 h1 small,
 h2 small {
 font-weight : normal;
-color : $lightgrey; }
+color : $lightgrey; 
+}
 
-h1,
-.h1 {
-margin-bottom : $base-line-height;
-font-size: $h1-size;
-line-height : 1.2; }
+h1, .h1 {
+  margin-bottom : $base-line-height;
+  line-height : 1.2; 
+}
 
-h2,
-.h2 {
-margin-bottom : $base-line-height / 2;
-font-size: $h2-size;
-line-height : 1.2; }
+h2,.h2 {
+  margin-bottom : $base-line-height / 2;
+  line-height : 1.2; 
+}
 
-h3,
-.h3 {
-margin-bottom : $base-line-height / 1.5;
-font-size: $h3-size;
-line-height : 1.3; }
+h3, .h3 {
+  margin-bottom : $base-line-height / 1.5;
+  line-height : 1.3; 
+}
 
-h4,
-.h4 {
-margin-bottom : $base-line-height;
-font-size: $h4-size;
-line-height : 1.25; }
+h4, .h4 {
+  margin-bottom : $base-line-height;
+  line-height : 1.25; 
+}
 
-h5,
-.h5 {
-font-size: $h5-size;
-margin-bottom : $base-line-height; }
+h5, .h5 {
+  margin-bottom : $base-line-height; 
+}
 
-h6,
-.h6 {
-margin-bottom : $base-line-height;
-font-size: $h6-size;
-font-weight : normal;
-letter-spacing : 1px;
-text-transform : uppercase; }
-
-// header
-
-.header h1,
-.header h2,
-.header h3 {
-float : left;
-margin-right : $gutter-width;
-
-a {
-display : block;
-position : relative;
-top : 6px;
-float : right;
-font-size: 14px;
-background-color : lighten($bg-color, 75%); }
-
-&:hover {
-background-color : lighten($bg-color, 75%); }
+h6, .h6 {
+  margin-bottom : $base-line-height;
+  font-weight : normal;
+  letter-spacing : 1px;
+  text-transform : uppercase; 
 }
 
 // TYPOGRAPHY ====================================================
@@ -85,11 +56,12 @@ ol,
 ul,
 dl,
 address {
-margin-top:     0;
-margin-bottom : $base-line-height;
-font-size:      $base-font-size;
-line-height :   $base-line-height; 
-clear: both;
+  margin-top:     0;
+  margin-bottom : $base-line-height;
+  font-size:      $base-font-size;
+  line-height :   $base-line-height; 
+  clear: both;
+  @include clearfix;
 }
 
 small {

@@ -1,3 +1,10 @@
 %header
   %h1
-    = settings.site
+    = "#{@title}"
+    %div.byline
+      - if @tagline
+        = @tagline 
+      - else
+        = app(:tagline)
+        %span.tertiary= "by"
+        = app(:author)

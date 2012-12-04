@@ -3,9 +3,20 @@
 }
 
 blockquote{
-  border-left: 10px solid $blockquote-border-color;
-  margin: 0 0 $gutter-width*2 0;
+  border-left: 10px solid $bg-color - 15;
+  color: $text-color + 50;
+  margin: 0 0 $base-line-height*2 0;
   @include span-columns(11,12);
   @include prefix(1);
   @include push(1);
+  padding-top: $base-line-height/2;
+  padding-bottom: $base-line-height/2;
+
+  .tertiary{ 
+    font-style: normal;
+    font-size: 0.6em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    @extend h6.tertiary;
+  }
 }

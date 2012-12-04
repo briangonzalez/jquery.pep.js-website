@@ -11,14 +11,16 @@ configure do
   settings.sprockets.append_path File.join(settings.assets_path, 'images')
   settings.sprockets.append_path File.join(settings.assets_path, 'fonts')
 
-  # configure Compass so it can find images
+  # CONFIGURE 
+  #   Compass so it can find images
   Compass.configuration do |compass|
     compass.project_path = settings.assets_path
     compass.images_dir   = 'images'
     compass.output_style = :compressed
   end
 
-  # configure Sprockets::Helpers
+  # CONFIGURE 
+  #   Sprockets::Helpers
   Sprockets::Helpers.configure do |config|
     config.environment = settings.sprockets
     config.prefix      = settings.assets_prefix
@@ -43,7 +45,7 @@ configure do
       filepath.split('/').last
     end
 
-    # scoop up the images so they can come along for the party
+    # scoop up the fonts so they can come along for the party
     fonts = Dir.glob(File.join(settings.assets_path, 'fonts', '**', '*')).map do |filepath|
       filepath.split('/').last
     end

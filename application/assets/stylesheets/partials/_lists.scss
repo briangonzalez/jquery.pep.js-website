@@ -1,7 +1,10 @@
 #main{
   ul{
     width: 100%;
-    @include prefix(1);
+    @include span-columns(11,12);
+    @include push(1);
+    overflow: visible;
+    
     li{ list-style-type: square; }
   }
 }

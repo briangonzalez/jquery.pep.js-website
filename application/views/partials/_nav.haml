@@ -1,6 +1,14 @@
 %nav
-  %ul
-    - nav_items = ['home', 'about', 'contact']
-    - nav_items.each do |i|
-      %li
-        %a{ :href => "/#{i}" }="#{i.upcase}"
+  %input.icon-chevron-down{ :href => '#', :type => "checkbox" }
+
+  %ul.menu-items
+    %li
+      %a.icon-home{ :href => '/' }Home
+    %li 
+      %a.icon-sign-blank{ :href => '/about' } About
+    %li 
+      %a.icon-phone{ :href => '/contact' } Contact
+    %li
+      %a.icon-twitter{ :href => "http://twitter.com/#{app(:twitter)}" } Twitter
+    %li
+      %a.icon-github{ :href => "http://www.github.com/#{app(:github)}" } Github

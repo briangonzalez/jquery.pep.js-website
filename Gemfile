@@ -8,6 +8,7 @@ gem 'thin'
 
 # rack
 gem 'rack'
+gem 'rack-cache'
 
 # sinatra
 gem 'sinatra'
@@ -22,6 +23,6 @@ gem 'sprockets-helpers'
 gem 'compass'
 gem 'compass-normalize'
 gem 'haml'
-gem 'rdiscount' # (markdown)
+gem 'maruku' # (markdown)
 gem 'susy'
 gem 'uglifier'

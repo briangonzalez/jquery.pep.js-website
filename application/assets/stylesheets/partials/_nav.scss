@@ -1,42 +1,88 @@
+
+$icon-size: 1.2em;
+
 nav{
   @include clearfix;
+  overflow: visible;
+  height: 1.5em;
+  position: relative; 
 
-  ul                  { @include span-columns(9 omega,12);
-                        @include clearfix; list-style-type: none; 
+  //  Our little drop arrow which 
+  //  hide / show the menu.
+  input[type=checkbox]{   
+      display: block; width: 100%; 
+      color: $lightgrey - 20;
+      outline: none;
+      border: none;
+      text-decoration: none;
+      font-size: $icon-size; 
+      @include appearance(none);
+      cursor: pointer;
+      display: inline-block;
+      overflow: visible;
+      position: absolute; top: 10px; left: 0;
 
-                        @include query-at($break-3){
-                          @include span-columns(6 omega,12);
-                        }
+      width: 2em;
+      height: 2em;
+      line-height: 2.1em;
+      text-align: center;
+      @include border-radius(50px);
 
-                        @include query-at($break-5){
-                          @include span-columns(3 omega,12);
-                        }
-                      }
+      @include transition(all 500ms);
+      @include transform-origin(50% 50%);
 
-  ul li:last-child   { @include span-columns(3 omega,9);
+      &:before{ font-weight: bold; }
+    }
+    input[type=checkbox]:hover          { color: black; }    
+    input[type=checkbox]:checked:before { content: "\f077"; }
+    input[type=checkbox]:checked{
+      color: $secondary-color - 20;
+      z-index: 10;
+      background: transparent;
+    }
 
-                        @include query-at($break-3){
-                          @include span-columns(2 omega,6);
-                        }
+    //  The nav is shown/hidden based on the 
+    //  next element selector
+    input[type=checkbox] + ul{
+      padding:0; padding-top: 4em;
 
-                        @include query-at($break-5){
-                          @include span-columns(1 omega,3);
-                        }
+      z-index: 1;
+      background: $darkgrey + 30;
+      @include border-radius(0 0 2px 2px);
+      @include span-columns(12,12);
+      @include query-at($break-3){ @include span-columns(8,12); display: none;}
+      display: none;
+    }
 
-                      }
+    input[type=checkbox]:checked + ul{
+      display: block;
+      position: absolute;
+      top: 0; left: 0;
 
-  ul li               { @include span-columns(3,9);
-                        border-top: 2px solid $text-color; 
+      li{ 
+        list-style-type: none; 
+        border-top: 2px solid $darkgrey + 40;
+        text-transform: uppercase;
+        font-size: 0.8em;
+        letter-spacing: 3px;
+        font-weight: 700;
+        color: white;
 
-                        @include query-at($break-3){
-                          @include span-columns(2,6);
-                        }
+        a, a:visited{ 
+          text-decoration: none; color: $lightgrey; 
+          display: inline-block;
+          padding: 1em 1.2em;
+          width: 100%;
+          text-align: left;
+        }
+        a:hover { color: white; }
+        a:before{ text-indent: 0; margin: 0 2em 0 5px; }
+      }
 
-                        @include query-at($break-5){
-                          @include span-columns(1,3);
-                        }
+      li:last-child{      @include border-radius(0 0 2px 2px) };
+      li:nth-child(odd)     { background: $darkgrey + 31; }
+      li:hover              { background: $darkgrey + 35; };
+      
+    }
 
-                      }
-  a, a:hover          { display: block; width: 100%; color: $text-color + 50; text-decoration: none;
-                        font-size: 11px;};
 }

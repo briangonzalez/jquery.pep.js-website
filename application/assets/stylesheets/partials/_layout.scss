@@ -7,23 +7,9 @@ header          { clear:both; }
 
 .container      { 
   @include container; 
+  max-width: 800px;
   &.show-grid{ @include susy-grid-background; }
 }
 
-#main           { 
-  @include clearfix; 
-  @include query-at($break-3){ 
-    @include span-columns(9, 12);
-  }
-}
-
-#sidebar        {
-
-  line-height: 30px;
-
-  @include query-at($break-3){
-    @include span-columns(3 omega,12);
-  }
-}
-
+#main           {  @include clearfix; }
 footer          { clear:both; }

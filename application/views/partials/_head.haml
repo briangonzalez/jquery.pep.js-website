@@ -1,12 +1,12 @@
 %meta{:charset => "utf-8"}
 %link{:href => image_path('favicon.ico'), :rel => "shortcut icon"}
-%title= @title
+%title= "#{@title_tertiary || @title} | #{app(:site)}"
 %meta{:content => "Meaningful description.", :name => "description"}
 %meta{:content => "width=device-width", :name => "viewport"}
 %link{:href => stylesheet_path('style'), :media => "all", :rel => "stylesheet"}
 
 / Google Web Fonts, use 'em..
-%link{:href => '//fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic|Montserrat:400,700', :media => "all", :rel => "stylesheet"}
+%link{:href => '//fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic|Montserrat:400,700|Arvo:400,400italic|Sanchez:400italic,400', :media => "all", :rel => "stylesheet"}
 
 / More ideas for your <head> here: h5bp.com/docs/#head-Tips
 /

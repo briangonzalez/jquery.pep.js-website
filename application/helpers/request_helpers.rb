@@ -1,6 +1,6 @@
-# ================
+# ===================
 # = Request Helpers =
-# ================
+# ===================
 module Sinatra
   module RequestHelpers
 

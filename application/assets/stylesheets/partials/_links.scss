@@ -17,7 +17,10 @@
     @include single-transition(all, 0.2s);
     font-weight: 400;
 
-    &:hover{ color: $text-color + 20; background: $secondary-color + 10;}
+    &:hover{ 
+      color:        $primary-color + 10; 
+      background:   desaturate($secondary-color, 10%);
+    }
 
   }
 }

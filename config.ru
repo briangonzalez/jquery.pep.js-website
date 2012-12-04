@@ -14,8 +14,11 @@ set :raise_errors,    development?
 set :views,           './application/views'
 set :logging,         true
 set :static,          true                  # your upstream server should deal with those (nginx, Apache)
-set :ga,              'UX-XXXXXX'           # your Google Analytics ID for this site
-set :site,            'sinatra rootstrap'    # your site's name
+set :haml,            :format => :html5
+
+# = Configuration =
+app = YAML.load(File.read("app.yaml"))
+set :app_values, app
 
 # = map it out for me, boyeeeeiee =
 # sprockets

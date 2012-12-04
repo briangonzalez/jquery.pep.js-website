@@ -24,8 +24,11 @@
 
 @import 'partials/variables';
 @import 'partials/fonts';
-@import 'partials/typography';
+@import 'partials/type_base';
+@import 'partials/type';
+@import 'partials/icons';
 @import 'partials/links';
+@import 'partials/buttons';
 @import 'partials/layout';
 @import "partials/content";
 @import "partials/nav";
@@ -33,11 +36,7 @@
 @import "partials/footer";
 @import "partials/lists";
 @import 'partials/code';
-@import 'partials/icons';
 @import 'partials/scrollbars';
 
-@import 'partials/app';
-
-@include establish-baseline;
-@include border-box-sizing;
+@import 'partials/base';
 

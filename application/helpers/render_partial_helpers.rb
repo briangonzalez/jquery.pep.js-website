@@ -1,3 +1,8 @@
+
+# ===================
+# = Render Partial  =
+# ===================
+
 module Haml
   module Helpers
     def partial(template, *args)
