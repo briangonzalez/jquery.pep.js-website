@@ -3,21 +3,14 @@
 //    http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax
 //
 
-
-
-
-//
-//      #=> CODE
-//
-
-
-        @font-face {
-            font-family: 'Source Code';
-            src: font_url('SourceCodePro-Regular.eot');
-            src: font_url('SourceCodePro-Regular.eot?#iefix')   format('embedded-opentype'),
-                 font_url('SourceCodePro-Regular.woff')  format('woff'),
-                 font_url('SourceCodePro-Regular.ttf')   format('truetype'),
-                 font_url('SourceCodePro-Regular.svg')   format('svg');
-            font-weight: normal;
-            font-style: normal; }
+// @font-face {
+//     font-family: 'font';
+//     src: font_url('font.eot');
+//     src: font_url('font.eot?#iefix')   format('embedded-opentype'),
+//          font_url('font.woff')         format('woff'),
+//          font_url('font.ttf')          format('truetype'),
+//          font_url('font.svg')          format('svg');
+//     font-weight: normal;
+//     font-style: normal; 
+// }
 

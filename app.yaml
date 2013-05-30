@@ -8,3 +8,6 @@ tagline:  a simple sinatra starter
 
 version:  0.1
 ga:       'UX-XXXXXX'
+
+google_fonts:
+  - Source+Code+Pro

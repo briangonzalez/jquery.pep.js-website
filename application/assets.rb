@@ -7,7 +7,6 @@ set :assets_path,     File.join(settings.sprockets_root, settings.assets_prefix)
 configure do
   # setup our paths
   settings.sprockets.append_path File.join(settings.assets_path, 'stylesheets')
-  settings.sprockets.append_path File.join(settings.assets_path, 'javascripts')
   settings.sprockets.append_path File.join(settings.assets_path, 'images')
   settings.sprockets.append_path File.join(settings.assets_path, 'fonts')
 
@@ -16,7 +15,7 @@ configure do
   Compass.configuration do |compass|
     compass.project_path = settings.assets_path
     compass.images_dir   = 'images'
-    compass.output_style = :compressed
+    compass.output_style = development? ? :expanded : :compressed
   end
 
   # CONFIGURE 
@@ -35,11 +34,6 @@ configure do
     # clean that thang out
     config.manifest.clean
 
-    # minify our assets in prod, but not in dev.
-    if production?
-      settings.sprockets.js_compressor  = Uglifier.new(mangle: true)
-    end
-
     # scoop up the images so they can come along for the party
     images = Dir.glob(File.join(settings.assets_path, 'images', '**', '*')).map do |filepath|
       filepath.split('/').last
@@ -50,12 +44,11 @@ configure do
       filepath.split('/').last
     end
 
-    # note: .coffee files need to be referenced as .js for some reason
-    javascript_files = Dir.glob(File.join(settings.assets_path, 'javascripts', '**', '*')).map do |filepath|
-      filepath.split('/').last.gsub(/coffee/, 'js')
-    end
-
     # write the digested files out to public/assets (makes it so Nginx can serve them directly)
-    config.manifest.compile(%w(style.css) | javascript_files | images | fonts)
+    config.manifest.compile(%w(bootstrap.css) | images | fonts)
   end
 end
+
+# remove js
+FileUtils.rm_rf(settings.public_js_folder) if File.exists? settings.public_js_folder
+FileUtils.cp_r(settings.app_js_folder, settings.public_folder)

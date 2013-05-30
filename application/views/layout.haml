@@ -9,18 +9,14 @@
   = partial "partials/head"
 
 %body
-  /[if lt IE 7]
-    = partial "partials/chromeframe"
-
-  .container
-    = partial "partials/nav"
 
   .container
     = partial "partials/header"
 
-  .container
-    #main{ :role => "main" }
-      = yield
+  .container{ :role => "main" }
+    = yield
 
   .container
     = partial "partials/footer"
+    = partial "partials/ga"
+    

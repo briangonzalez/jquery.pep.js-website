@@ -1,9 +1,5 @@
-/* 
- * VARIABLES
- * =================================================== */
 
-// SUSY ====================================================
-/* see http://susy.oddbird.net/guides/reference/ */
+/* Susy Variables */
 $total-columns:               12;
 $column-width:                4.0em;
 $gutter-width:                0.5em;
@@ -13,34 +9,25 @@ $breakpoint:                  0em 45em; /* min-max media query breakpoint */
 $from-direction:              left;
 $omega-float:                 $from-direction;
 
-// COLORS ====================================================
+$max-width:                   600px;     
+
+
+/* Colors */
 $primary-color:               #e54e4b;
 $secondary-color:             #eee;
 
-$text-color:                  #333;
-$code-color:                  #5f5f5e;
-$code-color-y:                #b9a75d;
-$code-color-r:                #e54e4b;
-$code-color-b:                #607e90;
-
-
-$bg-color:                    #fff;
 $lightgrey:                   #ddd;
 $darkgrey:                    #333;
 $border-color:                #eee;
 $blockquote-border-color:     $primary-color;
 
-// BUTTONS =======================================================
-$button-border-radius:        2px;
-
-// TYPOGRAPHY ====================================================
+/* Typography */
+$text-color:                  #333;
 $base-font-size:              1em;        // == 16px
 $base-line-height:            1.875em;    // == 30px
 $base-font-weight:            400;
-$base-font:                   'PT Sans', Arial, sans-serif, sans;
-$base-heading-font:           'PT Sans', Arial, sans-serif, sans;
-$tertiary-heading-font:       'Sanchez', Times, serif;
-$alt-font:                    'Arial', sans-serif, sans;
-$code-font:                   'Source Code', Consolas,Menlo,Monaco,Courier New,monospace,serif;
+$base-font:                   Arial, sans-serif, sans;
+$base-heading-font:           Arial, sans-serif, sans;
+$code-font:                   Menlo,Monaco,Courier New,monospace,serif;
 $base-heading-fontweight:     bold;
 $base-headingfont-color:      $text-color - 5;

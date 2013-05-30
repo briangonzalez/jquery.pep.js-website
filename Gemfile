@@ -21,6 +21,7 @@ gem 'sprockets-helpers'
 
 # html/css/js
 gem 'compass'
+gem 'compass-h5bp'
 gem 'compass-normalize'
 gem 'haml'
 gem 'maruku' # (markdown)
