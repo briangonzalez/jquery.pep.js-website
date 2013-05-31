@@ -1,0 +1,9 @@
+
+[role='main']{
+
+  padding-top: $base-space*3;
+
+  @include query-at($break-2) { padding-top: $base-space*4; } 
+  @include query-at($break-3) { padding-top: $base-space*5; } 
+
+}

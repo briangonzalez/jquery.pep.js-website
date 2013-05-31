@@ -1,0 +1,32 @@
+footer{
+
+  overflow: visible;
+  position: relative;
+  padding: $base-space*3 0 $base-space*10 0;
+  margin-top: $base-space*3;
+
+  &:before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: -1000px;
+    bottom: 0px;
+    left: -1000px;
+    background: $primary-color;
+    z-index: -1;
+    opacity: 0.3;
+    border-top: 5px solid $primary-color - 10;
+    @include box-shadow(
+      0 -7px  0          $primary-color - 20, 
+      0 -13px 0          $primary-color - 30, 
+      0 -18px 0          $primary-color - 40,
+      0 -22px 0          $primary-color - 50,
+      0 -25px 0          $primary-color - 60,
+      0 -30px 20px  rgba($primary-color - 70, 0.4)
+    );
+
+
+  }
+
+
+}

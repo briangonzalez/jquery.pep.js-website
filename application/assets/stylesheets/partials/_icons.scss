@@ -1,0 +1,35 @@
+
+@font-face {
+  font-family: 'pepicons';
+  src: font_url('pepicons.eot'); /* IE9 Compat Modes */
+  src: font_url('pepicons.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       font_url('pepicons.woff') format('woff'), /* Modern Browsers */
+       font_url('pepicons.ttf')  format('truetype'), /* Safari, Android, iOS */
+       font_url('pepicons.svg#274c147909753cd42c2d1ba7bd1b8cd0') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'pepicons';
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+}
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  text-decoration: inherit;
+  display: inline-block;
+  speak: none;
+}
+
+/* Icons */
+.icon-cdn:before          {content: "\e000"; }
+.icon-twitter:before      {content: "\e001"; }
+.icon-github:before       {content: "\e002"; }
+.icon-fullscreen:before   {content: "\e003"; }
+.icon-codepen:before      {content: "\e004"; }

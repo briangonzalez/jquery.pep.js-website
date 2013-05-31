@@ -1,3 +1,16 @@
-%header
+%header.mast
+
+  .circle-wrap
+    .circle.primary
+    .circle.secondary
+
   %h1
     = "#{@title}"
+
+  %h2
+    = app(:tagline)
+
+  %nav
+    %a.icon-github{ href: app(:github_url), target: '_blank' }
+    %a.icon-twitter{ href: app(:github_url), target: '_blank' }
+    %a.icon-cdn{ href: app(:github_url), target: '_blank' }

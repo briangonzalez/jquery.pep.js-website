@@ -1,0 +1,59 @@
+
+section.demo{
+  margin-bottom: $base-space*5;
+
+  header{
+    background: $demo-header;
+    color: white;
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.2em;
+    padding: $base-space/1.5 0;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    position: relative;
+    @include border-radius(2px 2px 0 0);
+
+    i{
+      color: $demo-header - 30; 
+      position: absolute;
+      font-size: 1.4em;
+      top: $base-space/2;
+      cursor: pointer;
+
+      &.icon-codepen    { left: $base-space/2; font-size: 1.9em;  }
+      &.icon-fullscreen { right: $base-space/2; }
+      &:hover           { color: $demo-header - 60 };
+    }
+
+  }
+
+  .inner{
+    border: 20px solid $demo-border;
+    border-top: 0;
+    min-height: 400px;
+    @include border-radius(0 0 2px 2px);
+    background: white;
+    position: relative;
+
+    iframe { 
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      outline: none;
+      border: none;
+    }
+
+  }
+
+  &.full .inner{
+    background: $demo-border;
+  }
+
+}

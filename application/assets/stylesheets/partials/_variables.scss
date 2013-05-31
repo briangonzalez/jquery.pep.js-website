@@ -8,26 +8,36 @@ $border-box-sizing:           true;
 $breakpoint:                  0em 45em; /* min-max media query breakpoint */
 $from-direction:              left;
 $omega-float:                 $from-direction;
-
-$max-width:                   600px;     
+$base-space:                  $base-line-height ;
 
 
 /* Colors */
-$primary-color:               #e54e4b;
-$secondary-color:             #eee;
+$primary-color:               #c1f4f3;
+$secondary-color:             #ee7c3e;
+$background-color:            #f8f9f9;
+$header-h1-color:             #606163;
 
 $lightgrey:                   #ddd;
 $darkgrey:                    #333;
 $border-color:                #eee;
 $blockquote-border-color:     $primary-color;
 
+$demo-header: #e2d4c6;
+$demo-border: #f3eee6;
+$demo-red:    #e2633c;
+
 /* Typography */
-$text-color:                  #333;
+$text-color:                  #555;
 $base-font-size:              1em;        // == 16px
 $base-line-height:            1.875em;    // == 30px
 $base-font-weight:            400;
-$base-font:                   Arial, sans-serif, sans;
-$base-heading-font:           Arial, sans-serif, sans;
+$base-font:                   'Proxima Nova', Arial, sans-serif, sans;
+$base-heading-font:           'Proxima Nova', Arial, sans-serif, sans;
 $code-font:                   Menlo,Monaco,Courier New,monospace,serif;
 $base-heading-fontweight:     bold;
 $base-headingfont-color:      $text-color - 5;
+
+/* Breakpoints */
+$break-1:                     480px;
+$break-2:                     768px;
+$break-3:                     1280px;

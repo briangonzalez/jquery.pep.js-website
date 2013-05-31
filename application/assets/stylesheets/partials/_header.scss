@@ -1,0 +1,91 @@
+
+header.mast{
+  position: relative;
+  @include container;
+  @include clearfix;
+  text-align: center;
+  overflow: visible;
+  padding-bottom: $base-space*2;
+
+  @include query-at($break-1) { padding-bottom: $base-space*3; }    
+  @include query-at($break-2) { padding-bottom: $base-space*4; } 
+  @include query-at($break-3) { padding-bottom: $base-space*5; } 
+
+  h1{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 900;
+    color: $header-h1-color;
+    margin-bottom: $base-space;
+    font-size: 2.2em;
+
+    @include query-at($break-1) { font-size: 4em; margin-bottom: $base-space*1.5; }    
+    @include query-at($break-2) { font-size: 5.2em; }    
+
+  }
+
+  h2{
+    text-transform: uppercase;
+    font-weight: 200;
+    letter-spacing: 5px;
+    color: $lightgrey - 70;
+    font-size: 1.1em;
+
+    @include query-at($break-1) { font-size: 1.3em; color: $lightgrey - 40; }    
+    @include query-at($break-2) { font-size: 1.2em; }  
+
+  }
+
+  .circle-wrap{
+    margin: 80px auto 80px auto;
+    height: 150px; width:  150px;
+    position: relative;
+
+    @include query-at($break-1) { height: 200px; width:  200px; margin: 150px auto 120px auto; }
+    @include query-at($break-2) { height: 300px; width:  300px; margin: 180px auto 150px auto; }
+
+    .circle{
+      position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+      @include border-radius(150px);
+      background: $lightgrey;
+      opacity: 0.6;
+
+      &.primary     { background: $primary-color;   @include transform(translateX(-10%)) }
+      &.secondary   { background: $secondary-color; @include transform(translateX(10%)) }
+    }
+  }
+
+  &:before{
+    content: '';
+    position: absolute;
+    top: -1000px;
+    right: -1000px;
+    bottom: 0;
+    left: -1000px;
+    background: white;
+    z-index: -1;
+  }
+
+
+  nav{
+    margin-top: $base-space*2;
+
+    a { 
+      font-size: 2.2em;
+      margin-right: $base-space;  
+      color: $darkgrey + 70;
+      cursor: pointer;
+
+      &:hover       { color: $darkgrey; }
+      &:last-child  { margin-right: 0; }
+
+      @include query-at($break-1) { 
+        font-size: 2.5em;
+        margin-right: $base-space*2;
+      }
+
+    }
+
+  }
+
+}

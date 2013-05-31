@@ -1,13 +1,15 @@
 
-author:   Brian G.
-twitter:  brianmgonzalez
-github:   briangonzalez
+author:     Brian G.
+twitter:    brianmgonzalez
+github:     briangonzalez
 
-site:     origin
-tagline:  a simple sinatra starter
+github_url: https://github.com/briangonzalez/jquery.pep.js
 
-version:  0.1
-ga:       'UX-XXXXXX'
+site:       jquery.pep.js
+tagline:    kinetic drag for mobile & desktop
+
+version:    0.1
+ga:         'UX-XXXXXX'
 
 google_fonts:
   - Source+Code+Pro

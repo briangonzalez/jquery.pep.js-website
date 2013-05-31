@@ -1,17 +1,41 @@
 
 /* Your own imports */
 @import 'partials/mixins';
+@import 'partials/fonts';
 @import 'partials/media';
 @import 'partials/variables';
 @import 'partials/fonts';
 
+@import 'partials/header';
+@import 'partials/footer';
+@import 'partials/main';
+@import 'partials/demos';
+@import 'partials/icons';
+
+body, html{ margin: 0; padding: 0; overflow-x: hidden; }
+
 body{
 
+  * { 
+    @include box-sizing(border-box); 
+    @include transition(all 100ms ease-out); 
+  }
+
+  color: $text-color;
+  font-family: $base-font;
+  -webkit-font-smoothing: subpixel-antialiased;
+  background: $background-color;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  font-size: 80%;
+
+  @include query-at($break-1) { font-size: 80%; }
+  @include query-at($break-2) { font-size: 90%; }
+  @include query-at($break-3) { font-size: 100%; }
 
   .container{
     @include container;
     margin: 0 auto;
-    max-width: $max-width;
   }
 
 }
