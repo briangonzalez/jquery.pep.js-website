@@ -1,5 +1,5 @@
-set :domain, "<server>"
-set :application, "<dir>"
+set :domain, "pep.briangonzalez.org"
+set :application, "pep.briangonzalez.org"
 set :deploy_to, "/srv/www/#{application}"
 
 role :web, domain
@@ -7,7 +7,7 @@ role :app, domain
 role :db,  domain, :primary => true
 
 default_run_options[:pty] = true  # Must be set for the password prompt from git to work
-set :repository,  "<github repo>"
+set :repository,  "git@github.com:briangonzalez/jquery.pep.js-website.git"
 set :deploy_via, :remote_cache
 set :branch, "master"
 set :scm, "git"
