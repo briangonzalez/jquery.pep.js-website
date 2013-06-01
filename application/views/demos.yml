@@ -1,0 +1,43 @@
+- name:   Basic
+  url:    http://codepen.io/briangonzalez/pen/qbHzF
+  class:  basic
+
+- name:   Constrain to Parent
+  url:    http://codepen.io/briangonzalez/pen/HEbtx
+  class:  constrain-to-parent
+
+- name:   Constrain to Window
+  url:    http://codepen.io/briangonzalez/pen/FdhvK
+  class:  constrain-to-window
+
+- name:   Custom Easing Function
+  url:    http://codepen.io/briangonzalez/pen/pHvtK
+  class:  custom-function
+
+- name:   X/Y Axis
+  url:    http://codepen.io/briangonzalez/pen/HyCGq
+  class:  axis
+  peps:   ['x', 'y']
+
+- name:   Droppable
+  url:    http://codepen.io/briangonzalez/pen/IhJxu
+  class:  droppable
+  others: ['drop-target lt', 'drop-target rt', 'drop-target lb', 'drop-target rb']
+
+- name:   Droppable - Custom Overlap Function
+  url:    http://codepen.io/briangonzalez/pen/vHiLk
+  class:  droppable-custom-overlap
+  others: ['drop-target lt', 'drop-target rt', 'drop-target lb', 'drop-target rb']
+
+- name:   Droppable - Consuming Parent
+  url:    http://codepen.io/briangonzalez/pen/jqdar
+  class:  droppable-consuming-parent
+  others: ['drop-target lt', 'drop-target rt', 'drop-target lb', 'drop-target rb']
+
+- name:   Elastic Scroller
+  url:    http://codepen.io/briangonzalez/pen/cwryp
+  class:  elastic-scroller
+
+# - name:   Slider
+#   url:    http://codepen.io/briangonzalez/pen/pHvtK
+#   class:  droppable-consuming-parent

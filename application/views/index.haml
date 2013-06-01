@@ -3,22 +3,37 @@
   %header
     Usage
   .inner
+    %pre
+      %code
+        = preserve do
+          :escaped
+            <script src="jquery.js"></script>
+            <script src="dist/jquery.pep.min.js"></script>
+            <script>
+              jQuery(function($) {
+                // pep is super simple...but there are wayyy
+                // more options doc'd on github.
+                $('#pep').pep(); 
+              });
+            </script>
 
-- 6.times do |i|
-  %section.demo
-    %header
-      %i.icon-fullscreen
-      %i.icon-codepen
-      Demo #1: Basic
-    .inner
-      <iframe src="http://s.codepen.io/briangonzalez/fullpage/juGfr" id="result" frameborder="0" scrolling="auto" allowtransparency="true" sandbox="allow-scripts allow-same-origin"></iframe>
+/ Populate all of the demos.
+- demos.each_with_index do |demo, index|
+  - index += 1
+  = partial :'partials/demo', locals: { demo: demo, index: index  }
+
+%section.demo.full.bugs
+  %header
+    Found a bug?
+  .inner
+    %h2
+      %a{ href: 'https://github.com/briangonzalez/jquery.pep.js/issues', target: '_blank' }
+        File an issue on Github, por favor
 
 %section.demo.full.feature-request
   %header
     Request a Feature
   .inner
+    <iframe src="https://docs.google.com/forms/d/1UR-mt430yOjJlQTPKL1vah4LzvCIBN6BT82ZfMZeKxI/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 
-%section.demo.full.about
-  %header
-    About the Author
-  .inner
+= partial :'partials/about'

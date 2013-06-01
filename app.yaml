@@ -1,15 +1,17 @@
 
-author:     Brian G.
-twitter:    brianmgonzalez
-github:     briangonzalez
+author:       Brian G.
+twitter:      brianmgonzalez
+github:       briangonzalez
 
-github_url: https://github.com/briangonzalez/jquery.pep.js
+github_url:   https://github.com/briangonzalez/jquery.pep.js
+cdn_url:      https://rawgithub.com/briangonzalez/jquery.pep.js/master/src/jquery.pep.js
 
-site:       jquery.pep.js
-tagline:    kinetic drag for mobile & desktop
+site:         jquery.pep.js
+tagline:      kinetic drag for mobile & desktop
+description:  a jquery plugin for kinetic drag on mobile & desktop
 
-version:    0.1
-ga:         'UX-XXXXXX'
+version:      0.1
+ga:           'UA-5991707-5'
 
 google_fonts:
   - Source+Code+Pro

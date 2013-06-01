@@ -12,9 +12,10 @@ section.demo{
     letter-spacing: 3px;
     text-transform: uppercase;
     position: relative;
+    @include pad(2,2);
     @include border-radius(2px 2px 0 0);
 
-    i{
+    i,a{
       color: $demo-header - 30; 
       position: absolute;
       font-size: 1.4em;
@@ -32,28 +33,98 @@ section.demo{
     border: 20px solid $demo-border;
     border-top: 0;
     min-height: 400px;
-    @include border-radius(0 0 2px 2px);
+    height: 100%;
     background: white;
     position: relative;
+    @include border-radius(0 0 2px 2px);
 
-    iframe { 
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
+    .pep{
+      @extend .no-animation;
+      width:  80px; height: 80px;
+      cursor: move;
+      background: rgba($secondary-color, 0.7);
+      z-index: 10;
+      @include border-radius(1px);
 
-      width: 100%;
-      height: 100%;
-
-      outline: none;
-      border: none;
+      @include query-at($break-1) { width:  100px; height: 100px; }
+      @include query-at($break-2) { width:  120px; height: 120px; }
+      @include query-at($break-3) { width:  150px; height: 150px; }
     }
-
   }
+
+  &.constrain-to-window .inner{ position: static; }
 
   &.full .inner{
+    min-height: initial;
+    padding: $grid-padding;
     background: $demo-border;
   }
+
+  &.fullscreen{
+    position: fixed;
+    top: 0; right: 0; left: 0; bottom: 0;
+    margin: 0;
+    z-index: 100;
+
+    .inner{ 
+      border: 0; 
+      height: 80%;
+      @include box-shadow(0 100px 0px $demo-header, 0 200px 0px $demo-header);
+    }
+  }
+
+  &.feature-request{
+    .inner { padding: 0; }
+    iframe { width: 100%; min-height: 630px; }
+  }
+
+  &.bugs{
+    h2 { text-align: center; }
+  }
+
+  // Custom Demos ---------------------
+
+  &.axis{
+    .pep.x{ @include transform(translateX(10px)) }
+    .pep.y{ @include transform(translateY(10px)) }
+  }
+
+  &.droppable, 
+  &.droppable-custom-overlap,
+  &.droppable-consuming-parent{
+    .pep{ height: 50px; width: 50px; z-index: 10;}
+    .drop-target{
+      background: $demo-border;
+      height: 80px; width: 80px;
+      position: absolute;
+      
+      &.pep-dpa{ background: $primary-color; @include box-shadow(2px 2px 0 red) }
+      &.lt { top: 0%; left:  0%;   }
+      &.rt { top: 0%; right: 0%;   }
+      &.lb { bottom: 0%; left:  0%;}
+      &.rb { bottom: 0%; right: 0%;}
+    }
+  }
+
+  &.elastic-scroller{
+    .inner{
+      overflow:hidden;
+      padding: 0;
+      position:relative!important; 
+    }
+
+    .pep{
+      background: white;
+      width: auto; height: auto;
+      cursor: move;
+      padding: $grid-padding;
+      border: 1px solid rgba($lightgrey, 0.8);
+      border-right: 0;
+      border-left: 0;
+    }
+  }
+
+  // END Custom Demos ---------------------
+
 
 }

@@ -1,0 +1,26 @@
+section.demo.about{
+
+
+  .inner{
+    @include clearfix;
+    height: auto;
+
+    img{
+      @include box-shadow(5px 5px 0 $demo-header);
+      @include query-at($break-1) { @include span-columns(3, 12); }
+    }
+
+    .content{
+      @include query-at($break-1) { 
+        @include prefix(1);
+        @include span-columns(8 omega, 12); 
+      }
+      
+      h2{ 
+        @include query-at($break-1) { margin-top: 0;  }
+      }
+    }
+  }
+
+
+}

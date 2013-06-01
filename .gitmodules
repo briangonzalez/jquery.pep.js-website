@@ -1,0 +1,3 @@
+[submodule "application/assets/javascripts/pep"]
+	path = application/assets/javascripts/pep
+	url = git@github.com:briangonzalez/jquery.pep.js.git

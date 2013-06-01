@@ -1,3 +1,42 @@
 @mixin query-at($breakpoint) {
   @media (min-width: $breakpoint) { @content; }
 }
+
+// keyframes mixin
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content; 
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  } 
+}
+
+@include keyframes(popthenlock) {
+  0% {
+    bottom: -20px;
+    opacity: 0;
+  }
+  10% {
+    bottom: -20px;
+    opacity: 0;
+  }
+  50%{
+    bottom: 0;
+    opacity: 1;
+  }
+  90% {
+    bottom: -20px;
+    opacity: 0;
+  }
+  100% {
+    bottom: -20px;
+    opacity: 0;
+  } 
+}

@@ -1,10 +1,8 @@
 
 // Your app goes here.
-require(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
+require(['jquery', 'underscore'], function($, _, Backbone) {
 
-  $(document).ready(function(){
-    // App loaded ....
-    // and document ready.
-  })
+  require(['views/main']);
+  require(['views/demos']);
 
 });

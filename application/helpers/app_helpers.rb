@@ -13,6 +13,14 @@ module Sinatra
       settings.app_values[key.to_s]
     end
 
+    def demos
+      if Sinatra::Base.development?
+        YAML.load_file( File.join( settings.views, 'demos.yml' )  )
+      else
+        settings.demos
+      end
+    end
+
   end
 
   helpers AppHelpers

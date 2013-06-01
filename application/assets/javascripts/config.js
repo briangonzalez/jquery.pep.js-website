@@ -3,7 +3,9 @@ requirejs.config({
     "paths": {
       "jquery":       "lib/jquery-2.0.1",
       "underscore":   "lib/underscore",
-      "backbone":     "lib/backbone"
+      "backbone":     "lib/backbone",
+      "highlight":    "lib/highlight.pack",
+      "pep":          "pep/src/jquery.pep"
     },
   shim: {
     "jquery": {
@@ -17,6 +19,10 @@ requirejs.config({
     "backbone": {
       deps: ["jquery", "underscore"],
       exports: "Backbone"
+    },
+
+    "highlight": {
+      exports: "hljs"
     }
 
   }

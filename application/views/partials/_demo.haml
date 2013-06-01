@@ -1,0 +1,12 @@
+%section{ class: "demo #{demo['class']}", data: { 'codepen-path' => demo['url'], demo: 1 } }
+  %header
+    %i.icon-fullscreen
+    %a.icon-codepen{ href: demo['url'], target: '_blank' }
+    = "Demo ##{index}: #{demo['name']}"
+  .inner
+    - demo['peps'] ||= ['']
+    - demo['peps'].each do |p|
+      .pep{ class: p } 
+    - if demo['others']
+      - demo['others'].each do |o|
+        %div{ class: o }
