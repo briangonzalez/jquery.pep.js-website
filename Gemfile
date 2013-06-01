@@ -28,3 +28,7 @@ gem 'haml'
 gem 'maruku' # (markdown)
 gem 'susy'
 gem 'uglifier'
+
+# the nodes.
+gem "execjs"
+gem "therubyracer"
