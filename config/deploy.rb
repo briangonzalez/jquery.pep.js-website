@@ -14,6 +14,8 @@ set :scm, "git"
 set :user, "root"  # The server's user for deploys
 ssh_options[:forward_agent] = true
 
+set :git_enable_submodules, 1
+
 # if you want to clean up old releases on each deploy uncomment this:
 after "deploy:restart", "deploy:cleanup"
 
@@ -26,5 +28,6 @@ namespace :deploy do
   task :stop do ; end
   task :restart, :roles => :app, :except => { :no_release => true } do
     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
+    run "git submodule "
   end
 end
