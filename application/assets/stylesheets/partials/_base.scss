@@ -40,6 +40,14 @@ body{
     margin: 0 auto;
   }
 
+  a, a:visited, a:hover{
+    background: rgba($secondary-color, 0.1);
+    padding: 3px;
+    color: $text-color;
+    text-decoration: none;
+    &:hover{ color: white; background: rgba($secondary-color, 0.7); }
+  }
+
 }
 
 .no-animation  { @include transition(all, 0) } 

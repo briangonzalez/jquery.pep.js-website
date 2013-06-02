@@ -20,6 +20,12 @@ section.demo.about{
         @include query-at($break-1) { margin-top: 0;  }
       }
     }
+
+    .icon-codepen{
+      padding: 0 5px;
+      font-size: 1.4em;
+    }
+
   }
 
 

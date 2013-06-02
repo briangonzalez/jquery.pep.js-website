@@ -37,6 +37,7 @@
 - name:   Elastic Scroller
   url:    http://codepen.io/briangonzalez/pen/cwryp
   class:  elastic-scroller
+  others: ['loading', 'pull'] 
 
 # - name:   Slider
 #   url:    http://codepen.io/briangonzalez/pen/pHvtK
