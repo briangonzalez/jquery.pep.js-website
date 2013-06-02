@@ -25,7 +25,7 @@ section.demo{
 
       &.icon-codepen    { left: $base-space/2; font-size: 1.9em;  }
       &.icon-fullscreen { right: $base-space/2; }
-      &:hover           { color: $demo-header - 60 };
+      &:hover           { color: $demo-header - 60; background: none; };
     }
 
   }
