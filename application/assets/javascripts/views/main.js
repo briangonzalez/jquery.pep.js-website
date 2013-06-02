@@ -28,7 +28,7 @@ define(['backbone', 'pep', 'highlight'], function(Backbone, pep, hljs){
     showCDNDialog: function(e){
       e.preventDefault();
       prompt(
-        "Copy this URL to use in your projects. We'll have a cdnjs link up soon",
+        "Copy this URL to use in your projects. We'll have a cdnjs link up soon.",
         $(e.target).attr('href')
       )
     }

@@ -112,7 +112,9 @@ header.mast{
       display: inline-block;
       background: none;
 
-      &:hover       { color: $darkgrey; @include transform( translateY(-2px) )}
+      &:hover       { color: $darkgrey;  
+                      background: none; 
+                      @include transform( translateY(-2px) )}
       &:last-child  { margin-right: 0; }
 
       @include query-at($break-1) { 
