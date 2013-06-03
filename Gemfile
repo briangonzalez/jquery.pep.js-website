@@ -13,7 +13,6 @@ gem 'rack-cache'
 
 # sinatra
 gem 'sinatra'
-gem 'sinatra-flash', require: 'sinatra/flash' # enables flash[:notice] && flash[:error]
 
 # sprockets galore
 gem 'sprockets'

@@ -5,6 +5,7 @@
 %title= "#{app(:site)} | #{@title_tertiary || @title}"
 %meta{:content => app(:description), :name => "description"}
 %meta{:content => "width=device-width", :name => "viewport"}
+%meta{ :'http-equiv' => "X-UA-Compatible", content: "chrome=1"}
 
 / Bring in our own styles
 %link{:href => stylesheet_path('bootstrap'), :media => "all", :rel => "stylesheet"}
