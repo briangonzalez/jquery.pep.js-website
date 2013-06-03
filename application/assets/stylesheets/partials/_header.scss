@@ -9,8 +9,8 @@ header.mast{
   padding-bottom: $base-space*2;
 
   @include query-at($break-1) { padding-bottom: $base-space*3; padding-top: $base-space*3; }    
-  @include query-at($break-2) { padding-bottom: $base-space*4; padding-top: $base-space*4; } 
-  @include query-at($break-3) { padding-bottom: $base-space*5; padding-top: $base-space*6; } 
+  @include query-at($break-2) { padding-bottom: $base-space*4; padding-top: $base-space; } 
+  @include query-at($break-3) { padding-bottom: $base-space*5; padding-top: $base-space; } 
 
   h1{
     text-transform: uppercase;
@@ -36,26 +36,6 @@ header.mast{
     @include query-at($break-1) { font-size: 1.3em; color: $lightgrey - 40; }    
     @include query-at($break-2) { font-size: 1.2em; }  
 
-    .social{
-      position: absolute;
-      display: inline-block;
-      height: 100%;
-      width: 100%;
-      left: 0;
-      background: white;
-      padding-left: 27px;
-      -webkit-animation: 10s infinite popthenlock;
-         -moz-animation: 10s infinite popthenlock;
-              animation: 10s infinite popthenlock;
-
-      &:hover{
-        -webkit-animation: none;
-           -moz-animation: none;
-                animation: none;
-      };
-
-    }
-
   }
 
   .circle-wrap{
@@ -64,7 +44,7 @@ header.mast{
     position: relative;
 
     @include query-at($break-1) { height: 200px; width:  200px; margin: 100px auto 150px auto; }
-    @include query-at($break-2) { height: 300px; width:  300px; margin: 100px auto 175px auto; }
+    @include query-at($break-2) { height: 250px; width:  250px; margin: 100px auto 175px auto; }
 
     .circle{
       background: $lightgrey;
@@ -76,8 +56,17 @@ header.mast{
       cursor: move;
       @include transition(all 300ms ease-out);
 
-      &.primary     { background: $primary-color; z-index: 4; }
-      &.secondary   { background: $secondary-color; z-index: 5; }
+      &.primary     { 
+        background: $primary-color; 
+        @include background-image( linear-gradient(top, $primary-color + 20, $primary-color) );
+        z-index: 4; 
+      }
+
+      &.secondary   { 
+        background: $secondary-color;
+        @include background-image( linear-gradient(top, $secondary-color + 20, $secondary-color) );
+        z-index: 5; 
+      }
 
       &.shown         { opacity: 0.6; } 
       &.no-animation  { @extend .no-animation; }

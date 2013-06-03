@@ -6,5 +6,5 @@ end
 
 desc "Start Thin in development mode"
 task :start do
-  system("bundle exec thin start -R config.ru -p 6789")
+  system("bundle exec thin start -R config.ru -p 1960")
 end
