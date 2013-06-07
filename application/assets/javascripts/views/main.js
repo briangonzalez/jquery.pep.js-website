@@ -3,7 +3,7 @@ define(['backbone', 'pep', 'highlight', 'views/modal'], function(Backbone, pep, 
   var MainView = Backbone.View.extend({
     el: 'body',
     events: {
-      'click header .icon-cdn': 'showCDNDialog'
+      'click .cdn-modal-show': 'showCDNDialog'
     },
 
     initialize: function(){
