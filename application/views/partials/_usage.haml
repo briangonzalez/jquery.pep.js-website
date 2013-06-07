@@ -1,0 +1,17 @@
+%section.demo.full
+  %header
+    Usage
+  .inner
+    %pre
+      %code
+        = preserve do
+          :escaped
+            <script src="jquery.js"></script>
+            <script src="dist/jquery.pep.min.js"></script>
+            <script>
+              jQuery(function($) {
+                // pep is super simple...but there are wayyy
+                // more options doc'd on github.
+                $('#pep').pep(); 
+              });
+            </script>

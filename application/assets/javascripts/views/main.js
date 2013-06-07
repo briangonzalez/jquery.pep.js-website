@@ -1,9 +1,9 @@
-define(['backbone', 'pep', 'highlight'], function(Backbone, pep, hljs){
+define(['backbone', 'pep', 'highlight', 'views/modal'], function(Backbone, pep, hljs, ModalView){
   
   var MainView = Backbone.View.extend({
     el: 'body',
     events: {
-      'click .icon-cdn': 'showCDNDialog'
+      'click header .icon-cdn': 'showCDNDialog'
     },
 
     initialize: function(){
@@ -27,10 +27,7 @@ define(['backbone', 'pep', 'highlight'], function(Backbone, pep, hljs){
 
     showCDNDialog: function(e){
       e.preventDefault();
-      prompt(
-        "Copy this URL to use in your projects. We'll have a cdnjs link up soon.",
-        $(e.target).attr('href')
-      )
+      new ModalView();
     }
 
   });
