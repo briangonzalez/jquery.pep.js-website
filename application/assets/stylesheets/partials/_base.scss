@@ -21,7 +21,7 @@ body{
 
   * { 
     @include box-sizing(border-box); 
-    &::not(.pep){ @include transition(all 100ms ease-out); }
+    &:not(.pep){ @include transition(all 100ms ease-out); }
   }
 
   color: $text-color;
