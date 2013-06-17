@@ -92,6 +92,7 @@ header.mast{
       cursor: pointer;
       display: inline-block;
       background: none;
+      @include transition(all 350ms ease);
 
       &:hover       { color: $darkgrey;  
                       background: none; 
