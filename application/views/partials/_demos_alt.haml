@@ -1,0 +1,19 @@
+
+%section.demo.full
+  %header
+    More Demos
+  
+  .inner
+
+    %p
+      Want your demo featured here with your name? 
+
+      %strong
+        %a{ href: "http://twitter.com/#{app(:twitter)}" }Let me know.
+
+    %p
+      %ul
+        - demos_alt.each do |demo|
+          %li
+            %a{ href: demo['url'] }
+              = demo['name']

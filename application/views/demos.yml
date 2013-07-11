@@ -39,6 +39,7 @@
   class:  elastic-scroller
   others: ['loading', 'pull'] 
 
-# - name:   Slider
-#   url:    http://codepen.io/briangonzalez/pen/pHvtK
-#   class:  droppable-consuming-parent
+- name:   Image Inspector
+  iframe: http://s.codepen.io/briangonzalez/fullpage/lkDpJ
+  url:    http://codepen.io/briangonzalez/pen/lkDpJ
+  clearfix: true

@@ -6,10 +6,14 @@ define(['backbone'], function(Backbone){
     },
 
     initialize: function(){
-      require([this.$el.data('codepen-path') + ".js"])
+      var path = this.$el.data('codepen-path');
+
+      if ( path )
+        require([this.$el.data('codepen-path') + ".js"])
     },
 
     full: function(){
+      console.log('f')
       this.$el.toggleClass('fullscreen');
     }
 

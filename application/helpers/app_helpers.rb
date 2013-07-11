@@ -15,10 +15,22 @@ module Sinatra
 
     def demos
       if Sinatra::Base.development?
-        YAML.load_file( File.join( settings.views, 'demos.yml' )  )
+        YAML.load_file( settings.demos_path  )
       else
         settings.demos
       end
+    end
+
+    def demos_alt
+      if Sinatra::Base.development?
+        YAML.load_file( settings.demos_alt_path  )
+      else
+        settings.demos_alt
+      end
+    end
+
+    def version
+      settings.pep_manifest['version']
     end
 
   end

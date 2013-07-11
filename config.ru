@@ -4,7 +4,7 @@ Bundler.require(:default)
 
 # config
 set :run,               false
-set :show_exceptions,   false
+set :show_exceptions,   development?
 set :raise_errors,      development?
 set :public_folder,     './public'
 set :public_js_folder,  './public/javascripts'

@@ -4,7 +4,16 @@ Dir.glob('./application/**/*.rb') do |file|
 end
 
 configure do
-  set :demos, YAML.load_file( File.join( settings.views, 'demos.yml' )  )
+  set :demos_path,        File.join( settings.views, 'demos.yml' ) 
+  set :demos,             YAML.load_file( settings.demos_path  )
+
+  set :demos_alt_path,    File.join( settings.views, 'demos_alt.yml' )
+  set :demos_alt,         YAML.load_file( settings.demos_alt_path )
+
+  set :pep_manifest_path, './public/javascripts/pep/package.json'
+  set :pep_manifest,      JSON.parse( IO.read(settings.pep_manifest_path) )
+
+  puts settings.pep_manifest
 
   set :pep_path, './public/javascripts/pep/dist/jquery.pep.min.js'
   `tar -cvzf #{settings.pep_path}.gz #{settings.pep_path}`

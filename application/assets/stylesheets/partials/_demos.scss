@@ -38,6 +38,8 @@ section.demo{
     background: white;
     position: relative;
     @include border-radius(0 0 2px 2px);
+    
+    &.clearfix{ @include clearfix; }
 
     .pep{
       @extend .no-animation;
@@ -51,6 +53,19 @@ section.demo{
       @include query-at($break-2) { width:  120px; height: 120px; }
       @include query-at($break-3) { width:  150px; height: 150px; }
     }
+
+    iframe.codepen{
+      width: 100%;
+      height: 100%;
+      border: none;
+      float: left;
+
+      @include query-at($break-2){
+        height: 500px;
+      }
+
+    }
+
   }
 
   &.constrain-to-window .inner{ position: static; }
@@ -71,6 +86,8 @@ section.demo{
       border: 0; 
       height: 80%;
       @include box-shadow(0 100px 0px $demo-header, 0 200px 0px $demo-header);
+
+      iframe.codepen{ width: 100%; height: 100%; }
     }
   }
 
