@@ -40,6 +40,6 @@
   others: ['loading', 'pull'] 
 
 - name:   Image Inspector
-  iframe: http://s.codepen.io/briangonzalez/fullpage/lkDpJ
+  iframe: http://codepen.io/briangonzalez/fullgrid/lkDpJ?type=embed&safe=true
   url:    http://codepen.io/briangonzalez/pen/lkDpJ
   clearfix: true
