@@ -54,16 +54,11 @@ section.demo{
       @include query-at($break-3) { width:  150px; height: 150px; }
     }
 
-    iframe.codepen{
+    iframe.cp_embed_iframe{
       width: 100%;
-      height: 100%;
       border: none;
       float: left;
-
-      @include query-at($break-2){
-        height: 500px;
-      }
-
+      height: 600px;
     }
 
   }
