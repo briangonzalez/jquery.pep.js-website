@@ -40,6 +40,9 @@
   others: ['loading', 'pull'] 
 
 - name:   Image Inspector
-  iframe: http://codepen.io/briangonzalez/fullgrid/lkDpJ?type=embed&safe=true
+  raw:    >
+            <p data-height="591" data-theme-id="0" data-slug-hash="lkDpJ" data-user="briangonzalez" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/briangonzalez/pen/lkDpJ'>
+            [Pep] Demo - Image Inspector</a> by Brian Gonzalez (<a href='http://codepen.io/briangonzalez'>@briangonzalez</a>) on <a href='http://codepen.io'>CodePen</a></p>
+            <script async src="http://codepen.io/assets/embed/ei.js"></script>
   url:    http://codepen.io/briangonzalez/pen/lkDpJ
   clearfix: true

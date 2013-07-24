@@ -4,8 +4,8 @@
     %a.icon-codepen{ href: demo['url'], target: '_blank' }
     = "Demo ##{index}: #{demo['name']}"
   .inner{ class: " #{'clearfix' if demo['clearfix']} " }
-    - if demo['iframe']
-      %iframe.codepen{ :src => demo['iframe'] }
+    - if demo['raw']
+      = demo['raw']
     - else
       - demo['peps'] ||= ['']
       - demo['peps'].each do |p|
