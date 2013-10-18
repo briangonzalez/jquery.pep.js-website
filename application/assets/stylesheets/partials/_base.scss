@@ -52,3 +52,7 @@ body{
 }
 
 .no-animation  { @include transition(all 0) } 
+
+.speckly-bg{
+  background-image: url( image-path('specks-black.png') );
+}

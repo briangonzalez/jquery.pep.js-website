@@ -1,4 +1,4 @@
-set :domain, "pep.briangonzalez.org"
+set :domain, "briangonzalez.org"
 set :application, "pep.briangonzalez.org"
 set :deploy_to, "/srv/www/#{application}"
 

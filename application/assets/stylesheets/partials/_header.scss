@@ -71,18 +71,20 @@ header.mast{
       @include transition(all 300ms ease-out);
 
       &.primary     { 
-        background: $primary-color; 
+        background-color: $primary-color; 
         @include background-image( linear-gradient(top, $primary-color + 20, $primary-color) );
+        border: 5px solid $primary-color + 10;
         z-index: 4; 
       }
 
       &.secondary   { 
         background: $secondary-color;
         @include background-image( linear-gradient(top, $secondary-color + 20, $secondary-color) );
+        border: 5px solid $secondary-color + 10;
         z-index: 5; 
       }
 
-      &.shown         { opacity: 0.6; } 
+      &.shown         { opacity: 0.75; } 
       &.no-animation  { @extend .no-animation; }
       &.translateRight{ @include transform(translateX(15%));  }
       &.translateLeft { @include transform(translateX(-15%)); }
