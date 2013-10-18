@@ -1,0 +1,13 @@
+root:
+  ~/code/github/jquery.pep.js/web
+
+commands:
+  
+  web_status:         git status 
+  web_start:          rake start 
+  pep_status:         cd application/assets/javascripts/pep && git st && grunt --help
+  pep_demo:           cd application/assets/javascripts/pep && grunt serve --port=11961
+
+layout:
+  - [ web_status, web_start ]
+  - [ pep_status, pep_demo ]        
