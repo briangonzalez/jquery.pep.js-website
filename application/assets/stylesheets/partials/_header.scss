@@ -143,6 +143,7 @@ header.mast{
   background: $third-color;
   height: 12px;
   position: absolute; top: 0; left: 0; right: 0;
+  border-bottom: 3px solid $border-color;
 
   .box{ width: 8.3%; height: 100%; float: left; }
   .box-1{  background: #ffefc2; }  // orange
