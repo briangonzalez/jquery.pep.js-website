@@ -1,5 +1,8 @@
-%header.mast
+.rainbow
+  - 12.times do |i|
+    %div.box{ class: "box-#{i}" }
 
+%header.mast
   .pep-size
     = "#{pep_size}KB"
     .tag

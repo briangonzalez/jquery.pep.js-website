@@ -36,7 +36,7 @@ header.mast{
       letter-spacing: 0;
       font-weight: bold;
       font-size: 1.2em;
-      position: absolute; top: 0; right: 0;
+      position: absolute; top: 20px; right: 0;
 
       .tag{
         font-size: 0.15em;
@@ -72,19 +72,27 @@ header.mast{
 
       &.primary     { 
         background-color: $primary-color; 
-        @include background-image( linear-gradient(top, $primary-color + 20, $primary-color) );
-        border: 5px solid $primary-color + 10;
+        @include box-shadow( 
+          -1px 1px 0px $primary-color - 5,  
+          -2px 2px 0px $primary-color - 5,
+          -3px 3px 0px $primary-color - 5
+          );
+        border: 2px solid $primary-color + 5;
         z-index: 4; 
       }
 
       &.secondary   { 
         background: $secondary-color;
-        @include background-image( linear-gradient(top, $secondary-color + 20, $secondary-color) );
-        border: 5px solid $secondary-color + 10;
+        @include box-shadow( 
+          -1px 1px 0px $secondary-color - 5,  
+          -2px 2px 0px $secondary-color - 5,
+          -3px 3px 0px $secondary-color - 5
+          );
+        border: 2px solid $secondary-color + 5;
         z-index: 5; 
       }
 
-      &.shown         { opacity: 0.75; } 
+      &.shown         { opacity: 0.95; } 
       &.no-animation  { @extend .no-animation; }
       &.translateRight{ @include transform(translateX(15%));  }
       &.translateLeft { @include transform(translateX(-15%)); }
@@ -129,4 +137,25 @@ header.mast{
       }
     }
   }
+}
+
+.rainbow{
+  background: $third-color;
+  height: 12px;
+  position: absolute; top: 0; left: 0; right: 0;
+
+  .box{ width: 8.3%; height: 100%; float: left; }
+  .box-1{  background: #ffefc2; }  // orange
+  .box-2{  background: #fee3c2; }
+  .box-3{  background: #fed4c1; }
+  .box-4{  background: #fdbec2; }
+  .box-5{  background: #f4b8e3; }
+  .box-6{  background: #d9b6f2; }
+  .box-7{  background: #bab6f2; }
+  .box-8{  background: #b6d3f2; }
+  .box-9{  background: #b6f2f2; }
+  .box-10{ background: #bff4b7; }
+  .box-11{ background: #eefabc; }
+  .box-12{ background: #fffdc0; }
+
 }
