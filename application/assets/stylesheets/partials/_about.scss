@@ -6,6 +6,9 @@ section.demo.about{
     height: auto;
 
     img{
+      width: 50%;
+      margin: 0 auto $base-space*2 auto;
+      display: block;
       @include box-shadow(5px 5px 0 $demo-header);
       @include query-at($break-1) { @include span-columns(3, 12); }
     }
