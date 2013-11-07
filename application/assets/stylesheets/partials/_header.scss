@@ -139,36 +139,8 @@ header.mast{
   }
 }
 
-.rainbow{
+.color-bar{
   background: $third-color;
   height: 15px;
   position: absolute; top: 0; left: 0; right: 0;
-  // border-bottom: 3px solid $border-color;
-
-  // .box{ width: 8.3%; height: 100%; float: left; }
-  // .box-1{  background: #ffefc2; }  // orange
-  // .box-2{  background: #fee3c2; }
-  // .box-3{  background: #fed4c1; }
-  // .box-4{  background: #fdbec2; }
-  // .box-5{  background: #f4b8e3; }
-  // .box-6{  background: #d9b6f2; }
-  // .box-7{  background: #bab6f2; }
-  // .box-8{  background: #b6d3f2; }
-  // .box-9{  background: #b6f2f2; }
-  // .box-10{ background: #bff4b7; }
-  // .box-11{ background: #eefabc; }
-  // .box-12{ background: #fffdc0; }
-
-  .box{ width: 8.3%; height: 100%; float: left; }
-
-  @for $i from 1 through 12{
-    .box-#{$i}{
-      background: darken(saturate($third-color, $i * 5%), $i * 1%);
-      @include box-shadow(2px 1px 4px rgba(black, 0.05) );
-      position: relative;
-      z-index: 12 - $i;
-      // border-right: 1px solid $third-color;
-    }
-  }
-
 }
