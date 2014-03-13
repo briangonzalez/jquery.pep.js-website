@@ -31,3 +31,5 @@ gem 'uglifier'
 # the nodes.
 gem "execjs"
 gem "therubyracer"
+
+gem "capistrano", "2.15.5"
