@@ -8,9 +8,9 @@ header.mast{
   padding-top:    $base-space*2;
   padding-bottom: $base-space*2;
 
-  @include query-at($break-1) { padding-bottom: $base-space*3; padding-top: $base-space*3; }    
-  @include query-at($break-2) { padding-bottom: $base-space*4; padding-top: $base-space; } 
-  @include query-at($break-3) { padding-bottom: $base-space*5; padding-top: $base-space; } 
+  @include query-at($break-1) { padding-bottom: $base-space*3; padding-top: $base-space*3; }
+  @include query-at($break-2) { padding-bottom: $base-space*4; padding-top: $base-space; }
+  @include query-at($break-3) { padding-bottom: $base-space*5; padding-top: $base-space; }
 
   .h1{
     width: 100%;
@@ -25,8 +25,8 @@ header.mast{
     font-size: 1.1em;
     position: relative;
 
-    @include query-at($break-1) { font-size: 1.3em; color: $lightgrey - 40; }    
-    @include query-at($break-2) { font-size: 1.2em; }  
+    @include query-at($break-1) { font-size: 1.3em; color: $lightgrey - 40; }
+    @include query-at($break-2) { font-size: 1.2em; }
   }
 
   .pep-size{
@@ -48,7 +48,7 @@ header.mast{
         &:first-letter{ text-transform: none; };
       }
 
-      @include query-at($break-1) { padding: 10px 5px; }  
+      @include query-at($break-1) { padding: 10px 5px; }
 
     }
 
@@ -70,29 +70,29 @@ header.mast{
       cursor: move;
       @include transition(all 300ms ease-out);
 
-      &.primary     { 
-        background-color: $primary-color; 
-        @include box-shadow( 
-          -1px 1px 0px $primary-color - 5,  
+      &.primary     {
+        background-color: $primary-color;
+        @include box-shadow(
+          -1px 1px 0px $primary-color - 5,
           -2px 2px 0px $primary-color - 5,
           -3px 3px 0px $primary-color - 5
           );
         border: 2px solid $primary-color + 5;
-        z-index: 24; 
+        z-index: 24;
       }
 
-      &.secondary   { 
+      &.secondary   {
         background: $secondary-color;
-        @include box-shadow( 
-          -1px 1px 0px $secondary-color - 5,  
+        @include box-shadow(
+          -1px 1px 0px $secondary-color - 5,
           -2px 2px 0px $secondary-color - 5,
           -3px 3px 0px $secondary-color - 5
           );
         border: 2px solid $secondary-color + 5;
-        z-index: 25; 
+        z-index: 25;
       }
 
-      &.shown         { opacity: 0.95; } 
+      &.shown         { opacity: 0.95; }
       &.no-animation  { @extend .no-animation; }
       &.translateRight{ @include transform(translateX(15%));  }
       &.translateLeft { @include transform(translateX(-15%)); }
@@ -117,30 +117,24 @@ header.mast{
   nav{
     margin-top: $base-space*2;
 
-    a { 
+    a {
       font-size: 2.2em;
-      margin-right: $base-space;  
+      margin-right: $base-space;
       color: $darkgrey + 70;
       cursor: pointer;
       display: inline-block;
       background: none;
       @include transition(all 350ms ease);
 
-      &:hover       { color: $darkgrey;  
-                      background: none; 
+      &:hover       { color: $darkgrey;
+                      background: none;
                       @include transform( translateY(-2px) )}
       &:last-child  { margin-right: 0; }
 
-      @include query-at($break-1) { 
+      @include query-at($break-1) {
         font-size: 2.5em;
         margin-right: $base-space*2;
       }
     }
   }
-}
-
-.color-bar{
-  background: $third-color;
-  height: 15px;
-  position: absolute; top: 0; left: 0; right: 0;
 }
