@@ -1,3 +1,5 @@
+- name:   Easing Function
+  url:    http://codepen.io/briangonzalez/pen/caa6f1452d1e9002c1779d57f4422317/
 
 - name:   Snap to Grid
   url:    http://codepen.io/briangonzalez/pen/274f06f80ad088eb8ce09f020d88f848
@@ -29,7 +31,7 @@
 - name:   Map
   url:    http://codepen.io/briangonzalez/full/6fcb3cdbae9bfef8dc8cb27b97700a9e
 
-- name:   Zoom & Drag Image
+- name:   "Zoom & Drag Image"
   url:    http://codepen.io/briangonzalez/full/nkIDs
 
 - name:   Manual Revert
@@ -37,4 +39,5 @@
 
 - name:   Windows
   url:    http://codepen.io/briangonzalez/pen/khscp
+
 
