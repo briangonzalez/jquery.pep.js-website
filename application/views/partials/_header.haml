@@ -1,11 +1,6 @@
 .color-bar
 
 %header.mast
-  / .pep-size
-  /   = "#{pep_size}KB"
-  /   .tag
-  /     = "v#{version}</br>"
-  /     compressed &</br>gzipped
 
   .circle-wrap
     .circle.secondary
@@ -14,7 +9,7 @@
   %img{ class: "h1", src: image_path('pep.svg') }
 
   %h2
-    = app(:tagline)
+    = "#{app(:tagline)} - v#{version}"
 
   %nav
     %a.icon-github{ href: app(:github_url), target: '_blank' }
